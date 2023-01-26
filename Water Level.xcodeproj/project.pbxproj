@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		01430CF42963014700A7D323 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01430CF32963014700A7D323 /* AppDelegate.swift */; };
 		01430CF62963014700A7D323 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01430CF52963014700A7D323 /* SceneDelegate.swift */; };
-		01430CF82963014700A7D323 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01430CF72963014700A7D323 /* ViewController.swift */; };
+		01430CF82963014700A7D323 /* WaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01430CF72963014700A7D323 /* WaterViewController.swift */; };
 		01430CFB2963014700A7D323 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01430CF92963014700A7D323 /* Main.storyboard */; };
 		01430CFD2963014A00A7D323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01430CFC2963014A00A7D323 /* Assets.xcassets */; };
 		01430D002963014A00A7D323 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01430CFE2963014A00A7D323 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		01430CF02963014700A7D323 /* Water Level.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Water Level.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01430CF32963014700A7D323 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01430CF52963014700A7D323 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		01430CF72963014700A7D323 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		01430CF72963014700A7D323 /* WaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterViewController.swift; sourceTree = "<group>"; };
 		01430CFA2963014700A7D323 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01430CFC2963014A00A7D323 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01430CFF2963014A00A7D323 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,13 +58,37 @@
 			children = (
 				01430CF32963014700A7D323 /* AppDelegate.swift */,
 				01430CF52963014700A7D323 /* SceneDelegate.swift */,
-				01430CF72963014700A7D323 /* ViewController.swift */,
-				01430CF92963014700A7D323 /* Main.storyboard */,
+				01430D092964878700A7D323 /* Model */,
+				01430D072964875F00A7D323 /* View */,
+				01430D082964876E00A7D323 /* Controller */,
 				01430CFC2963014A00A7D323 /* Assets.xcassets */,
 				01430CFE2963014A00A7D323 /* LaunchScreen.storyboard */,
 				01430D012963014A00A7D323 /* Info.plist */,
 			);
 			path = "Water Level";
+			sourceTree = "<group>";
+		};
+		01430D072964875F00A7D323 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01430CF92963014700A7D323 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01430D082964876E00A7D323 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				01430CF72963014700A7D323 /* WaterViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		01430D092964878700A7D323 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01430CF82963014700A7D323 /* ViewController.swift in Sources */,
+				01430CF82963014700A7D323 /* WaterViewController.swift in Sources */,
 				01430CF42963014700A7D323 /* AppDelegate.swift in Sources */,
 				01430CF62963014700A7D323 /* SceneDelegate.swift in Sources */,
 			);
@@ -293,8 +317,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,8 +345,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
